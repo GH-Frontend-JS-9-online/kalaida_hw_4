@@ -1,0 +1,232 @@
+.header {
+  width: $defaultWidth;
+  min-height: 100px;
+  background: $defaultColor;
+  &__container {
+    width: 80%;
+    min-height: 100px;
+    margin: $defaultContainerMargin;
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+  }
+  &__left {
+    width: 30%;
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+    justify-content: flex-start;
+  }
+  &__logo--img {
+    padding-right: 15px;
+  }
+  &__logo--link {
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333;
+    font-size: 24px;
+    font-family: 'Lato', 'sans-serif';
+    & span {
+      color: #8d81ac;
+      padding-top: 2px;
+    }
+  }
+  &__right {
+    width: 70%;
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+    justify-content: flex-end;
+  }
+  &__nav {
+    display: $defaultDisplay;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &--list {
+      margin-left: 15px;
+      margin-right: 15px;
+      & a {
+        color: #635c73;
+        font-weight: 800;
+        transition: .2s;
+        &:hover {
+          color: #474057;
+        }
+        &:active {
+          color: #534C63;
+        }
+      }
+    }
+  }
+  &--btn {
+    width: 145px;
+    height: 38px;
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+    justify-content: center;
+    color: $defaultColor;
+    background: #8d81ac;
+    border-radius: 25px;
+    font-weight: 800;
+    transition: .2s;
+    margin-left: 10px;
+    font-family: $secondFontFamily;
+    &:hover {
+      background: #746893;
+    }
+    &:active {
+      background: #7C709B;
+    }
+  }
+  &--burger {
+    color: #333;
+    font-size: 20px;
+    transition: .2s;
+    margin-left: 15px;
+    display: none;
+    &:hover {
+      color: #2C2C2C;
+    }
+    &:active {
+      color: #2C2C2C;
+    }
+  }
+}
+
+.burger {
+  width: 100%;
+  min-height: 600px;
+  display: none;
+  flex-direction: column;
+  background: #2E2E2E;
+  position: absolute;
+  top: 100px;
+  &.active {
+    display: $defaultDisplay;
+  }
+  &__nav {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &--list {
+      width: 100%;
+      min-height: 100px;
+      display: $defaultDisplay;
+      align-items: $defaultAlignItems;
+      justify-content: flex-start;
+      text-align: left;
+      border-bottom: 1px solid rgba(244,244,244, .04);
+      & a {
+        color: $defaultColor;
+        font-size: 32px;
+        padding-left: 33px;
+        transition: .2s;
+        &:hover {
+          color: #8d81ac;
+        }
+      }
+    }
+  }
+  &--follow {
+    font-size: 32px;
+    margin-left: 33px;
+    color: rgba(255, 255, 255, .4);
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  &__soc {
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+    margin-bottom: 60px;
+    &--link {
+      color: $defaultColor;
+      font-size: 56px;
+      margin-left: 24px;
+      margin-right: 24px;
+      transition: .2s;
+      &:hover {
+        color: #8d81ac;
+      }
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 1125px) {
+  .header {
+    &__container {
+      width: 85%;
+    }
+    &__nav--list {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+}
+
+@media(min-width: 600px) and (max-width: 963px) {
+  .header {
+    &__container {
+      flex-direction: column;
+    }
+    &__right {
+      width: 100%;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &__left {
+      width: 100%;
+      justify-content: center;
+    }
+    &__logo {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+    &__nav {
+      margin-bottom: 15px;
+    }
+    &--btn {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 599px) {
+  .header {
+    &__nav {
+      display: none;
+    }
+    &--burger {
+      display: block;
+    }
+    &__left {
+      width: 50%;
+    }
+    &__right {
+      width: 50%;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 370px) {
+  .header {
+    &__container {
+      width: 95%;
+    }
+    &__logo--img {
+      padding-right: 10px;
+    }
+    &--burger {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media(min-width: 600px) and (max-width: 99999px) {
+  .burger {
+    display: none;
+    &.active {
+      display: none;
+    }
+  }
+}

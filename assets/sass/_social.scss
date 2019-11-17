@@ -1,0 +1,109 @@
+.social {
+  width: $defaultWidth;
+  min-height: 580px;
+  &__container {
+    width: 80%;
+    min-height: 580px;
+    margin: $defaultContainerMargin;
+    display: $defaultDisplay;
+    flex-direction: $defaultFlexDirection;
+    align-items: $defaultAlignItems;
+    z-index: 0;
+  }
+  &--line {
+    width: 910px;
+    height: 1px;
+    background: none;
+    border: 1px solid rgba(199,199,199, .2);
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  &__buttons {
+    display: $defaultDisplay;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+    &__block {
+      display: $defaultDisplay;
+      flex-direction: $defaultFlexDirection;
+      align-items: $defaultAlignItems;
+      margin-bottom: 40px;
+    }
+    &--btn {
+      width: 240px;
+      height: 50px;
+      border-radius: 3px;
+      display: $defaultDisplay;
+      align-items: $defaultAlignItems;
+      font-size: 21px;
+      cursor: pointer;
+      margin-left: 20px;
+      margin-right: 20px;
+      transition: .2s;
+      & i {
+        padding-right: 50px;
+        padding-left: 20px;
+      }
+    }
+    &--btn1 {
+      color: #000;
+      background: #f3f3f3;
+      &:hover {
+        background: #E4E4E4;
+      }
+      &:active {
+        background: #EAEAEA;
+      }
+    }
+    &--btn2 {
+      color: $defaultColor;
+      background: #26a6d1;
+      &:hover {
+        background: #1797C2;
+      }
+      &:active {
+        background: #25A5D0;
+      }
+    }
+    &--btn3 {
+      color: $defaultColor;
+      background: #3b5998;
+      &:hover {
+        background: #335190;
+      }
+      &:active {
+        background: #395796;
+      }
+    }
+    &--text {
+      color: #848e97;
+      font-size: 14px;
+      font-weight: $defaultFontWeight;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 700px) {
+  .social {
+    &__container {
+      width: 95%;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 1476px) {
+  .social {
+    &--line {
+      width: 90%;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 587px) {
+  .social {
+    &__buttons {
+      flex-direction: $defaultFlexDirection;
+      align-items: $defaultAlignItems;
+    }
+  }
+}

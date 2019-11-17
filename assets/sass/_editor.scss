@@ -1,0 +1,142 @@
+.editor {
+  width: $defaultWidth;
+  min-height: 390px;
+  &__container {
+    width: 80%;
+    min-height: 390px;
+    margin: $defaultContainerMargin;
+    display: $defaultDisplay;
+    flex-direction: $defaultFlexDirection;
+    align-items: $defaultAlignItems;
+    text-align: center;
+    position: relative;
+  }
+  &--btn {
+    width: 390px;
+    height: 62px;
+    background: #8d81ac;
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    border-radius: 30px;
+    position: absolute;
+    top: -31px;
+    transition: .2s;
+    &:hover {
+      background: #7A6E99;
+    }
+    &:active {
+      background: #887CA7;
+    }
+  }
+  &--trial {
+    color: #848e97;
+    font-size: 14px;
+    margin-top: 45px;
+    margin-bottom: 60px;
+  }
+  &--title {
+    color: #635c73;
+    font-size: 54px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  &--text {
+    color: #323232;
+    opacity: .8;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 36px;
+  }
+  &__soc {
+    display: $defaultDisplay;
+    margin-top: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+    &__block {
+      min-width: 124px;
+      height: 26px;
+      display: $defaultDisplay;
+      align-items: $defaultAlignItems;
+      border: 1px solid #D9D9D9;
+      border-radius: 3px;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+    &--btn {
+      height: 26px;
+      display: $defaultDisplay;
+      align-items: $defaultAlignItems;
+      cursor: pointer;
+      font-weight: $defaultFontWeight;
+      & i {
+        padding-right: 2px;
+      }
+    }
+    &--right {
+      width: 50%;
+      display: $defaultDisplay;
+      justify-content: center;
+    }
+    &--text {
+      font-weight: $defaultFontWeight;
+      font-size: 14px;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 498px) {
+  .editor {
+    &--btn {
+      width: $defaultWidth;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 410px) {
+  .editor {
+    &__container {
+      width: 95%;
+    }
+  }
+}
+
+@media(min-width: 500px) and (max-width: 600px) {
+  .editor {
+    &--title {
+      font-size: 48px;
+    }
+    &--text {
+      font-size: 19px;
+    }
+  }
+}
+
+@media(min-width: 368px) and (max-width: 499px) {
+  .editor {
+    &--title {
+      font-size: 40px;
+    }
+    &--text {
+      font-size: 17px;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 367px) {
+  .editor {
+    &--title {
+      font-size: 36px;
+    }
+    &--text {
+      font-size: 17px;
+    }
+  }
+}

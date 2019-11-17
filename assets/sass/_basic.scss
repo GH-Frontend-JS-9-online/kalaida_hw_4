@@ -1,0 +1,21 @@
+html,
+body {
+  height: $defaultHeight;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: $defaultFontFamily;
+  font-weight: $defaultFontWeight;
+}
+
+a {
+  text-decoration: none;
+}
