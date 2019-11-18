@@ -1,0 +1,122 @@
+.newsletter {
+  width: $defaultWidth;
+  min-height: 135px;
+  background: #f4f4f4;
+  &__container {
+    width: 80%;
+    min-height: 135px;
+    margin: $defaultContainerMargin;
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+  }
+  &__left {
+    width: 50%;
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+  }
+  &--text {
+    color: #635c73;
+    font-size: 30px;
+  }
+  &__right {
+    width: 50%;
+    display: $defaultDisplay;
+    justify-content: flex-end;
+    align-items: $defaultAlignItems;
+  }
+  &__form {
+    display: $defaultDisplay;
+    justify-content: flex-end;
+    align-items: $defaultAlignItems;
+    width: 100%;
+  }
+  &--input {
+    background-color: $defaultColor;
+    width: 335px;
+    height: 42px;
+    color: #c8cbcf;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding-left: 30px;
+    &::placeholder {
+      color: #c8cbcf;
+    }
+  }
+  &--btn {
+    width: 140px;
+    height: 42px;
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+    justify-content: center;
+    text-align: center;
+    background: #8d81ac;
+    color: $defaultColor;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: .2s;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 20px;
+    &:hover {
+      background: #7A6E99;
+    }
+    &:active {
+      background: #887CA7;
+    }
+  }
+}
+
+@media(min-width: 1010px) and (max-width: 1249px) {
+  .newsletter {
+    &__container {
+      width: 95%;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 1009px) {
+  .newsletter {
+    &__container {
+      width: 95%;
+      flex-direction: $defaultFlexDirection;
+      align-items: $defaultAlignItems;
+    }
+    &__left {
+      width: $defaultWidth;
+      justify-content: center;
+      text-align: center;
+    }
+    &__right {
+      width: $defaultWidth;
+      justify-content: center;
+    }
+    &__form {
+      margin-bottom: 30px;
+      justify-content: center;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 529px) {
+  .newsletter {
+    &__form {
+      flex-direction: $defaultFlexDirection;
+    }
+    &--input {
+      margin-bottom: 15px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 360px) {
+  .newsletter {
+    &--input {
+      width: $defaultWidth;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+.footer {
+  width: $defaultWidth;
+  min-height: 300px;
+  &__container {
+    width: 80%;
+    min-height: 300px;
+    margin: $defaultContainerMargin;
+    display: $defaultDisplay;
+    align-items: $defaultAlignItems;
+    border-top: 1px solid rgba(199,199,199, .2);
+  }
+  &__left {
+    width: 30%;
+    display: $defaultDisplay;
+    flex-direction: $defaultFlexDirection;
+    align-items: flex-start;
+    text-align: left;
+    &--logo {
+      display: $defaultDisplay;
+      align-items: $defaultAlignItems;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #333;
+      font-size: 24px;
+      font-family: $secondFontFamily;
+      &--img {
+        padding-right: 15px;
+      }
+      & span {
+        color: #8d81ac;
+        padding-top: 2px;
+      }
+    }
+    &--text {
+      color: #848e97;
+      font-size: 14px;
+      line-height: 21px;
+      width: 70%;
+    }
+  }
+  &__navigation {
+    width: 20%;
+    display: $defaultDisplay;
+    flex-direction: $defaultFlexDirection;
+    align-items: flex-start;
+    text-align: left;
+    &--title {
+      color: #323232;
+      font-size: 16px;
+      letter-spacing: 0.32px;
+      margin-bottom: 20px;
+    }
+  }
+  &__nav {
+    display: $defaultDisplay;
+    flex-direction: $defaultFlexDirection;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: flex-start;
+    text-align: left;
+    &--list {
+      margin-bottom: 5px;
+      margin-top: 0;
+      & a {
+        color: #8d81ac;
+        font-size: 15px;
+        letter-spacing: .3px;
+        transition: .2s;
+        &:hover {
+          color: #746893;
+        }
+        &:active {
+          color: #7C709B;
+        }
+      }
+    }
+  }
+  &__find {
+    width: 25%;
+    display: $defaultDisplay;
+    flex-direction: $defaultFlexDirection;
+    align-items: flex-start;
+    text-align: left;
+    &--phone {
+      font-size: 30px;
+      color: #3f3f3f;
+      letter-spacing: .6px;
+      margin-bottom: 7px;
+    }
+    &--time {
+      color: #848e97;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .24px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    &--city {
+      color: #323232;
+      letter-spacing: .32px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    &--street {
+      max-width: 221px;
+      color: #848e97;
+      font-size: 14px;
+      letter-spacing: .28px;
+      line-height: 23px;
+      margin-top: 0;
+    }
+  }
+  &__info {
+    width: 25%;
+    display: $defaultDisplay;
+    flex-direction: $defaultFlexDirection;
+    align-items: flex-start;
+    text-align: left;
+    &--title {
+      color: #323232;
+      font-size: 16px;
+      letter-spacing: .32px;
+      margin-bottom: 20px;
+    }
+    &--text {
+      color: #848e97;
+      font-size: 14px;
+      line-height: 23px;
+      letter-spacing: .28px;
+      margin-top: 0;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 1230px) {
+  .footer {
+    &__container {
+      width: 90%;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media(min-width: 600px) and (max-width: 1023px) {
+  .footer {
+    &__left {
+      width: 50%;
+    }
+    &__navigation {
+      width: 50%;
+    }
+    &__find {
+      width: 50%;
+    }
+    &__info {
+      width: 50%;
+    }
+  }
+}
+
+@media(min-width: 320px) and (max-width: 599px) {
+  .footer {
+    &__container {
+      flex-direction: $defaultFlexDirection;
+      align-items: $defaultAlignItems;
+      text-align: center;
+    }
+    &__left {
+      width: $defaultWidth;
+      margin-top: 50px;
+    }
+    &__navigation {
+      width: $defaultWidth;
+    }
+    &__find {
+      width: $defaultWidth;
+    }
+    &__info {
+      width: $defaultWidth;
+    }
+  }
+}
+
